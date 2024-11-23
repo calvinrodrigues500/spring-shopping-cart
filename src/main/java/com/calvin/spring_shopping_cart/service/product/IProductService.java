@@ -3,12 +3,14 @@ package com.calvin.spring_shopping_cart.service.product;
 import java.util.List;
 
 import com.calvin.spring_shopping_cart.model.Product;
+import com.calvin.spring_shopping_cart.request.AddProductRequest;
+import com.calvin.spring_shopping_cart.request.ProductUpdateRequest;
 
 public interface IProductService {
-    Product addProduct(Product product);
+    Product addProduct(AddProductRequest product);
     Product geProductById(Long id);
     void deleteProductById(Long id);
-    void updateProduct(Product product, Long productId);
+    Product updateProduct(ProductUpdateRequest product, Long productId);
     List<Product> getAllProducts();
     List<Product> getProductsByCategory(String category);
     List<Product> getProductsByBrand(String brand);
